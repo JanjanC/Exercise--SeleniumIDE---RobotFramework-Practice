@@ -55,14 +55,11 @@ Product Images Should Be Similar
         Should Be Equal As Strings    ${image_src}    ${src}
     END
 
-Check List Descending
-    [Arguments]    ${list}
-    ${length}=    Get Length    ${list}
-    FOR    ${i}    IN RANGE    ${length-1}
-        ${first}=    Set Variable    ${list}[${i}]    # element at index i in ${list}
-        ${second}=    Set Variable    ${list}[${i+1}]    # element at index i+1 in ${list}
-        Run Keyword If    ${first} <= ${second}    Fail    Element ${first} is not greater than ${second}.
-    END
+Select Sort Filter
+    [Arguments]    ${value}
+    Select From List By Value    class:product_sort_container    ${value}
+    ${selected} =    Get Selected List Value    class:product_sort_container
+    Should Be Equal As Strings    ${value}    ${selected}
 
 Get All Product Names
     ${names} =    Get WebElements    class:inventory_item_name

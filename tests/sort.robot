@@ -13,7 +13,7 @@ Sort Product Name (A to Z)
     Input Pass    ${VALID PASSWORD}
     Submit Credentials
     Product Page Should Be Open
-    Select From List By Value    class:product_sort_container    az
+    Select Sort Filter    az
     Product Names Should Be Sorted A to Z
 
 Sort Product Name (Z to A)
@@ -22,7 +22,7 @@ Sort Product Name (Z to A)
     Input Pass    ${VALID PASSWORD}
     Submit Credentials
     Product Page Should Be Open
-    Select From List By Value    class:product_sort_container    za
+    Select Sort Filter    za
     Product Names Should Be Sorted Z to A
 
 Sort Product Price (Low to High)
@@ -31,7 +31,7 @@ Sort Product Price (Low to High)
     Input Pass    ${VALID PASSWORD}
     Submit Credentials
     Product Page Should Be Open
-    Select From List By Value    class:product_sort_container    lohi
+    Select Sort Filter    lohi
     Product Prices Should Be Sorted Low to High
 
 Sort Product Price (High to Low)
@@ -40,5 +40,5 @@ Sort Product Price (High to Low)
     Input Pass    ${VALID PASSWORD}
     Submit Credentials
     Product Page Should Be Open
-    Select From List By Value    class:product_sort_container    hilo
+    Select Sort Filter    hilo
     Product Prices Should Be Sorted High to Low
