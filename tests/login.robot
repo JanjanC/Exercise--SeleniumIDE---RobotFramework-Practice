@@ -1,8 +1,8 @@
 *** Settings ***
-Documentation     A test suite with a single test for valid login
+Documentation     A test suite that tests the login feature
 ...
-...               This test follows the example using keywords from
-...               the SeleniumLibrary
+...               This test suite tests the login functionality
+...               of different users
 Resource          resources.robot
 Test Teardown     Close Browser
 
@@ -34,3 +34,4 @@ Problem User Login
     Input Pass    ${VALID PASSWORD}
     Submit Credentials
     Product Page Should Be Open
+    Product Images Should Be Similar    https://www.saucedemo.com/static/media/sl-404.168b1cce.jpg
